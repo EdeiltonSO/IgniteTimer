@@ -1,4 +1,4 @@
-export const defaultTheme = {
+export const mainTheme = {
     primary: 'rgb(168, 0, 246)',
     secondary: 'rgb(255, 173, 74)',
     success: 'rgb(69, 185, 69)',

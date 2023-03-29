@@ -1,10 +1,10 @@
 import { ThemeProvider } from "styled-components";
 import { Button } from "./components/Button";
-import { defaultTheme } from "./styles/themes/default";
+import { mainTheme } from "./styles/themes/main";
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={mainTheme}>
       <Button variant="primary" />
       <Button variant="secondary" />
       <Button variant="success" />
