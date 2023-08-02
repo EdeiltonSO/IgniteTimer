@@ -88,12 +88,6 @@ export function Home() {
   const task = watch('task')
   const isSubmitDisabled = !task
 
-  // activeCycle
-  //   ? console.log(
-  //       `diff: ${differenceInSeconds(new Date(), activeCycle.startDate)}`,
-  //     )
-  //   : console.log(`nao`)
-
   return (
     <HomeContainer>
       <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
