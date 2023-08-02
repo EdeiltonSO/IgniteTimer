@@ -51,11 +51,10 @@ export function Home() {
     if (activeCycle) {
       setInterval(() => {
         setAmountSecondsPassed(
-          differenceInSeconds(new Date(), activeCycle.startDate),
+          differenceInSeconds(new Date(), activeCycle?.startDate),
         )
       }, 1000)
     }
-    // console.log(activeCycle)
   }, [activeCycle])
 
   function handleCreateNewCycle(data: NewCycleFormData) {
@@ -75,7 +74,10 @@ export function Home() {
   }
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
-  const currentSeconds = activeCycle ? totalSeconds : amountSecondsPassed
+  // const currentSeconds = activeCycle ? totalSeconds : amountSecondsPassed
+  const currentSeconds = activeCycle
+    ? totalSeconds - amountSecondsPassed
+    : totalSeconds
 
   const minutesAmount = Math.floor(currentSeconds / 60)
   const secondsAmount = currentSeconds % 60
@@ -86,7 +88,11 @@ export function Home() {
   const task = watch('task')
   const isSubmitDisabled = !task
 
-  // console.log(currentSeconds)
+  // activeCycle
+  //   ? console.log(
+  //       `diff: ${differenceInSeconds(new Date(), activeCycle.startDate)}`,
+  //     )
+  //   : console.log(`nao`)
 
   return (
     <HomeContainer>
