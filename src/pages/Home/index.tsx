@@ -75,16 +75,16 @@ export function Home() {
     setActiveCycleId(null)
   }
 
-  const task = watch('task')
-  const isSubmitDisabled = !task
+  // const task = watch('task')
+  // const isSubmitDisabled = !task
 
   return (
     <HomeContainer>
-      <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
+      <form /* onSubmit={handleSubmit(handleCreateNewCycle)} */ action="">
         <CyclesContext.Provider
           value={{ activeCycle, activeCycleId, markCurrentCycleAsFinished }}
         >
-          <NewCycleForm />
+          {/* <NewCycleForm /> */}
           <Countdown />
         </CyclesContext.Provider>
 
@@ -94,7 +94,7 @@ export function Home() {
             Interromper
           </StopCountdownButton>
         ) : (
-          <StartCountdownButton disabled={isSubmitDisabled} type="submit">
+          <StartCountdownButton /* disabled={isSubmitDisabled} */ type="submit">
             <Play />
             Começar
           </StartCountdownButton>
