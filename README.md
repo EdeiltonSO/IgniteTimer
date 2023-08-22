@@ -22,4 +22,4 @@ O histórico inclui, para cada ciclo, o nome da atividade, a duração, o moment
 2. Após fazer o `git clone` ou descompactar o `.zip`, acesse a pasta;
 3. Execute o comando `npm i`;
 4. Execute o comando `npm run dev`;
-5. Acesse a aplicação pelo endereço que o Vite indicar;
+5. Acesse a aplicação pelo endereço que o Vite indicar.
